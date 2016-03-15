@@ -181,23 +181,23 @@ plot(Y1(:,1),Y1(:,2),'o','MarkerSize',4,'MarkerFaceColor','k','MarkerEdgeColor',
 % title ('2D Nonclassical multidimensional scaling','FontSize',15.0)
 xlabel ('X')
 ylabel ('Y')
-for i=1:ND
- A(i,1)=0.;
- A(i,2)=0.;
-end
-for i=1:NCLUST
-  nn=0;
-  ic=int8((i*64.)/(NCLUST*1.));
-  for j=1:ND
-    if (halo(j)==i)
-      nn=nn+1;
-      A(nn,1)=Y1(j,1);
-      A(nn,2)=Y1(j,2);
-    end
-  end
-  hold on
-  plot(A(1:nn,1),A(1:nn,2),'o','MarkerSize',2,'MarkerFaceColor',cmap(ic,:),'MarkerEdgeColor',cmap(ic,:));
-end
+% for i=1:ND
+%  A(i,1)=0.;
+%  A(i,2)=0.;
+% end
+% for i=1:NCLUST
+%   nn=0;
+%   ic=int8((i*64.)/(NCLUST*1.));
+%   for j=1:ND
+%     if (halo(j)==i)
+%       nn=nn+1;
+%       A(nn,1)=Y1(j,1);
+%       A(nn,2)=Y1(j,2);
+%     end
+%   end
+%   hold on
+%   plot(A(1:nn,1),A(1:nn,2),'o','MarkerSize',2,'MarkerFaceColor',cmap(ic,:),'MarkerEdgeColor',cmap(ic,:));
+% end
 
 %for i=1:ND
 %   if (halo(i)>0)
